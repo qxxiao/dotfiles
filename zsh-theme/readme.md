@@ -19,6 +19,7 @@ git clone https://github.com/qxxiao/config-backup.git
 2. Change the theme variable name to ZSH_THEME="astro" in ~/.zshrc
 3. Reload ZSH with source ~/.zshrc
 4. [modify ~/.oh-my-zsh/lib/git.zsh](#Fix)
+5. Font: FiraCode; Non-ascii Font: Wingdings3
 
 ## Fix
 1. in no commit repo, missing right center bracket
