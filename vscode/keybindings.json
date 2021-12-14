@@ -1,0 +1,185 @@
+// 将键绑定放在此文件中以覆盖默认值auto[]
+[
+    {
+        "key": "ctrl+[Backquote]",
+        "command": "workbench.action.terminal.new" // 启动新终端
+    },
+    {
+        "key": "cmd+c",
+        "command": "-extension.vim_cmd+c",
+        "when": "editorTextFocus && vim.active && vim.overrideCopy && vim.use<D-c> && !inDebugRepl"
+    },
+    {
+        "key": "alt+left",
+        "command": "cursorWordPartLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+alt+left",
+        "command": "-cursorWordPartLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+cmd+left",
+        "command": "-workbench.action.terminal.resizePaneLeft",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "ctrl+cmd+right",
+        "command": "-workbench.action.terminal.resizePaneRight",
+        "when": "terminalFocus && terminalProcessSupported"
+    },
+    {
+        "key": "alt+right",
+        "command": "cursorWordPartRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+alt+right",
+        "command": "-cursorWordPartRight",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "shift+alt+right",
+        "command": "cursorWordPartRightSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+shift+alt+right",
+        "command": "-cursorWordPartRightSelect",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-deleteLeft",
+        "when": "textInputFocus"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "-extension.vim_ctrl+k",
+        "when": "editorTextFocus && vim.active && vim.use<C-k> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "-extension.vim_ctrl+h",
+        "when": "editorTextFocus && vim.active && vim.use<C-h> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "-deleteAllRight",
+        "when": "textInputFocus && !editorReadonly"
+    },
+    {
+        "key": "ctrl+k",
+        "command": "extension.vim_ctrl+k"
+    },
+    {
+        "key": "ctrl+h",
+        "command": "extension.vim_ctrl+h"
+    },
+    {
+        "key": "ctrl+c",
+        "command": "-extension.vim_ctrl+c",
+        "when": "editorTextFocus && vim.active && vim.overrideCtrlC && vim.use<C-c> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-list.focusPageDown",
+        "when": "listFocus && !inputFocus"
+    },
+    {
+        "key": "ctrl+d",
+        "command": "-extension.vim_ctrl+d",
+        "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "-workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup"
+    },
+    {
+        "key": "ctrl+shift+tab",
+        "command": "-workbench.action.quickOpenLeastRecentlyUsedEditorInGroup"
+    },
+    //for signals
+    //记得要打开 workbench.action.terminal.sendSequence, 使其传入shell处理,与调试有关。。。
+    {
+        "key": "ctrl+\\", //quit
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u001c"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+c", //interupt default:quit
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u0003"
+        },
+        "when": "terminalFocus"
+    },
+    {
+        "key": "ctrl+d", // eof
+        "command": "workbench.action.terminal.sendSequence",
+        "args": {
+            "text": "\u0004"
+        },
+        "when": "terminalFocus"
+    },
+    // 选择tab页面
+    // 该用直接使用ctrl+tab选择编辑器页面
+    {
+        "key": "ctrl+shift+tab",
+        "command": "workbench.action.quickOpenNavigatePreviousInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.quickOpenNavigateNextInEditorPicker",
+        "when": "inEditorsPicker && inQuickOpen"
+    },
+    {
+        "key": "ctrl+tab",
+        "command": "workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup",
+        "when": "!inQuickOpen"
+    },
+    /* Tab and Shift+Tab support in QuickOpen panel (command palette) */
+    // "when": "inCommandsPicker || inFilesPicker"
+    {
+        // "key": "tab",
+        "key": "cmd+n",
+        "command": "workbench.action.quickOpenSelectNext",
+        "when": "inQuickOpen"
+    },
+    {
+        // "key": "shift+tab", //doesn't work
+        "key": "cmd+p",
+        "command": "workbench.action.quickOpenSelectPrevious",
+        "when": "inQuickOpen"
+    },
+    // 增加tab来选择智能提示
+    {
+        "key": "tab",
+        "command": "selectNextSuggestion",
+        // "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    {
+        "key": "shift+tab",
+        "command": "selectPrevSuggestion",
+        // "when": "editorTextFocus && suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+        "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible"
+    },
+    // 可选
+    {
+        "key": "tab",
+        "command": "selectNextQuickFix",
+        "when": "editorFocus && quickFixWidgetVisible"
+    },
+    {
+        "key": "shift+tab",
+        "command": "selectPrevQuickFix",
+        "when": "editorFocus && quickFixWidgetVisible"
+    },
+]
+
