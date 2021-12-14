@@ -12,8 +12,8 @@
 * 添加固定的背景颜色（以免主题插件升级改变颜色）dracula soft
 ```json
 "workbench.colorCustomizations": {
-	...
-	// 添加固定的面板颜色
+    ...
+    // 添加固定的面板颜色
     // "terminal.background": "#242424",
     "panel.background": "#242424",
     "contrastBorder": "#191A21",
