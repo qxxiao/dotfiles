@@ -1,17 +1,17 @@
 # Astro zsh theme [fix]
 
-> source: [https://github.com/iplaces/astro-zsh-theme](https://github.com/iplaces/astro-zsh-theme)
-Astro theme is based on ys theme and robbyrushell (default theme) theme.
+> source: [https://github.com/iplaces/astro-zsh-theme](https://github.com/iplaces/astro-zsh-theme)  
+> Astro theme is based on ys theme and robbyrushell (default theme) theme.
 
 ## Screenshots
-![](https://gitee.com/qxxiao_hust/pic/raw/master/img/20211214192055.png)
+![](./1.png)
 
 
 ## Installation
 ### Clone the repository:
 
-```
-$ git clone https://github.com/qxxiao/config-backup.git
+```shell
+git clone https://github.com/qxxiao/config-backup.git
 ```
 
 ### Theme
@@ -22,7 +22,7 @@ $ git clone https://github.com/qxxiao/config-backup.git
 
 ## Fix
 1. in no commit repo, missing right center bracket
-```
+```shell
 # modify ~/.oh-my-zsh/lib/git.zsh
 
 function git_prompt_short_sha() {
