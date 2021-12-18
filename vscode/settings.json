@@ -28,7 +28,7 @@
         "editor.findMatchBorder": "#64FFDA",
         "selection.background": "#64FFDA40",
         // 添加固定的面板颜色
-        // "terminal.background": "#242424",
+        "terminal.background": "#242424",
         "panel.background": "#242424",
         "contrastBorder": "#191A21",
         "editor.background": "#1e1e1e",
@@ -53,6 +53,31 @@
     "prettier.tabWidth": 4,
     "html.format.endWithNewline": true,
     "vetur.format.defaultFormatter.html": "prettier",
+    //eslint
+    "eslint.validate": [
+        "javascript",
+        "javacriptreact",
+        "vue-html",
+        "html",
+        "vue"
+    ],
+    "eslint.options": {
+        "extensions": [
+            ".js",
+            ".vue"
+        ]
+    },
+    "files.associations": {
+        "*.vue": "vue",
+        "*.js": "javascript",
+        ".*.cjosn": "jsonc",
+        "*.wxss": "css",
+        "*.wxs": "javascript",
+        "*.java": "java",
+        "*.dart": "dart",
+        "*.cc": "cpp",
+        "*.sol": "solidity"
+    },
     // 使能每一种语言默认格式化规则
     "[html]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -68,9 +93,9 @@
     },
     /*  prettier的配置 */
     "prettier.printWidth": 120, // 超过最大值换行
-    "prettier.useTabs": false, // 缩进不使用tab，使用空格
+    "prettier.useTabs": false, // 缩进使用空格
     "prettier.semi": true, // 句尾添加分号
-    "prettier.singleQuote": true, // 使用单引号代替双引号
+    "prettier.singleQuote": true, // 使用单引号代替双引号s
     "prettier.proseWrap": "preserve", // 默认值。因为使用了一些折行敏感型的渲染器（如GitHub comment）而按照markdown文本样式进行折行
     "prettier.arrowParens": "avoid", //  (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号
     "prettier.bracketSpacing": true, // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
@@ -115,8 +140,6 @@
     "remote.SSH.defaultForwardedPorts": [],
     "prettier.useEditorConfig": false, //禁用自带的代码补全
     "C_Cpp.intelliSenseEngine": "Tag Parser", // 因为有clang的lint，所以关掉
-    // C/C++ Clang Command Adapter
-    //
     "editor.quickSuggestions": true,
     "editor.quickSuggestionsDelay": 5,
     "C_Cpp.experimentalFeatures": "Enabled",
@@ -130,6 +153,8 @@
     "git.enableSmartCommit": true,
     "terminal.integrated.cursorStyle": "underline",
     "[cpp]": {
+        "editor.quickSuggestions": true,
+        "editor.autoIndent": "advanced",
         "editor.wordBasedSuggestions": false,
         "editor.suggest.insertMode": "replace",
         "editor.semanticHighlighting.enabled": true,
@@ -224,18 +249,13 @@
         "editor.suggestSelection": "first",
         "editor.wordBasedSuggestions": false,
     },
-    "files.associations": {
-        "*.dart": "dart",
-        "*.cc": "cpp",
-        "*.sol": "solidity"
-    },
     "[rust]": {
-        "editor.defaultFormatter": "matklad.rust-analyzer"
+        "editor.defaultFormatter": "rust-lang.rust"
     },
-    "java.refactor.renameFromFileExplorer": "autoApply",
     "go.toolsManagement.autoUpdate": true,
     "editor.detectIndentation": false,
     "[c]": {
+        "editor.quickSuggestions": true,
         "editor.autoIndent": "advanced",
         "editor.wordBasedSuggestions": false,
         "editor.suggest.insertMode": "replace",
@@ -245,9 +265,6 @@
     "debug.onTaskErrors": "abort",
     "terminal.integrated.tabs.enabled": true,
     "C_Cpp.autocompleteAddParentheses": true,
-    "clang.cxxflags": [
-        "-std=c++2a"
-    ],
     "liveServer.settings.donotShowInfoMsg": true,
     "liveServer.settings.donotVerifyTags": true,
     "workbench.editorAssociations": {
@@ -302,7 +319,7 @@
         }
     },
     "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
-    "C_Cpp.default.intelliSenseMode": "macos-gcc-x64",
+    // todo Tree
     "todo-tree.filtering.ignoreGitSubmodules": true,
     "todo-tree.general.enableFileWatcher": true,
     "todo-tree.highlights.foregroundColourScheme": [],
@@ -317,4 +334,13 @@
         "violet"
     ],
     "workbench.colorTheme": "Dracula Soft",
+    "C_Cpp.default.intelliSenseMode": "macos-gcc-x64",
+    "editor.inlineSuggest.enabled": false,
+    "editor.snippetSuggestions": "bottom",
+    "bracketPairColorizer.depreciation-notice": false,
+    "clangd.detectExtensionConflicts": false,
+    "clangd.path": "/Users/xiao/Library/Application Support/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/13.0.0/clangd_13.0.0/bin/clangd",
+    "C_Cpp.autocomplete": "Disabled",
+    "code-runner.saveFileBeforeRun": true,
+    "code-runner.saveAllFilesBeforeRun": true,
 }
