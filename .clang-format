@@ -34,12 +34,16 @@ BraceWrapping:
   SplitEmptyNamespace: false
 
 # Align
-AlignAfterOpenBracket: Align
-AlignConsecutiveAssignments: true
-AlignConsecutiveDeclarations: true
+AlignAfterOpenBracket: true
+# - 连续赋值语句的对齐
+AlignConsecutiveAssignments: false
+# - 连续声明的对齐 可能导致空格间距过大
+AlignConsecutiveDeclarations: false
 AlignEscapedNewlines: Right
 AlignOperands: true
 AlignTrailingComments: true
+# - 但是会导致 A a = {2, {3, 4}};换行
+AlignArrayOfStructures: Right
 
 # 允许函数声明的所有参数在放在下一行
 AllowAllParametersOfDeclarationOnNextLine: false
@@ -67,9 +71,10 @@ BreakBeforeBinaryOperators: NonAssignment
 BreakBeforeTernaryOperators: true
 # - 自定义换行
 BreakBeforeBraces: Custom
-BreakInheritanceList: AfterComma
+# - 继承类的换行
+# BreakInheritanceList: AfterComma
 # - 初始化列表换行方式 AfterColon(在冒号后换行) BeforeColon(在冒号前换行)
-BreakConstructorInitializers: AfterColon
+# BreakConstructorInitializers: AfterColon
 # - java多行注解每个都换行
 BreakAfterJavaFieldAnnotations: true
 # - 运行字符串字面量换行
