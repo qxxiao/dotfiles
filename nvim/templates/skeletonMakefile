@@ -1,0 +1,8 @@
+#
+# %FFILE%
+# %Author%, %MYDATE%
+#
+
+all:
+	%HERE%@echo "%FFILE% needs your attention"
+
