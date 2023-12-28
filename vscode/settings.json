@@ -1,0 +1,460 @@
+{
+  "editor.fontSize": 14,
+  "workbench.statusBar.visible": true,
+  "breadcrumbs.enabled": true,
+  "workbench.colorCustomizations": {
+    // "activityBarBadge.background": "#64FFDA",
+    "activityBar.activeBorder": "#64FFDA",
+    "list.activeSelectionForeground": "#64FFDA",
+    "list.inactiveSelectionForeground": "#64FFDA",
+    "list.highlightForeground": "#64FFDA",
+    "scrollbarSlider.activeBackground": "#64FFDA50",
+    "editorSuggestWidget.highlightForeground": "#64FFDA",
+    "textLink.foreground": "#64FFDA",
+    "progressBar.background": "#64FFDA",
+    "pickerGroup.foreground": "#64FFDA",
+    "tab.activeBorder": "#64FFDA",
+    "notificationLink.foreground": "#64FFDA",
+    "editorWidget.resizeBorder": "#64FFDA",
+    "editorWidget.border": "#64FFDA",
+    "settings.modifiedItemIndicator": "#64FFDA",
+    "settings.headerForeground": "#64FFDA",
+    "panelTitle.activeBorder": "#64FFDA",
+    "breadcrumb.activeSelectionForeground": "#64FFDA",
+    "menu.selectionForeground": "#64FFDA",
+    "menubar.selectionForeground": "#64FFDA",
+    "editor.findMatchBorder": "#64FFDA",
+    // "editor.lineHighlightBorder": "#64FFDA",
+    "selection.background": "#64FFDA40",
+    // 添加固定的面板颜色
+    "terminal.background": "#242424",
+    "panel.background": "#242424",
+    "contrastBorder": "#191A21",
+    "editor.background": "#1e1e1e"
+  },
+  "editor.fontFamily": "'Fira Code', Menlo, Monaco, 'Courier New', monospace, 'FiraCode Nerd Font'",
+  "editor.fontLigatures": true,
+  "explorer.confirmDelete": false,
+  "files.autoSave": "afterDelay",
+  "editor.suggestSelection": "first",
+  "explorer.confirmDragAndDrop": false,
+  "editor.formatOnType": true,
+  "editor.formatOnPaste": true,
+  "go.useLanguageServer": true,
+  "editor.linkedEditing": true,
+  "workbench.iconTheme": "material-icon-theme",
+  "python.languageServer": "Pylance",
+  "terminal.integrated.defaultProfile.osx": "zsh",
+  //eslint
+  "eslint.validate": ["javascript", "javacriptreact", "vue-html", "vue"],
+  "eslint.options": {
+    "extensions": [".js", ".vue"]
+  },
+  "files.associations": {
+    "*.vue": "vue",
+    "*.js": "javascript",
+    ".*.cjosn": "jsonc",
+    "*.wxss": "css",
+    "*.wxs": "javascript",
+    "*.java": "java",
+    "*.dart": "dart",
+    "*.cc": "cpp",
+    "*.sol": "solidity",
+    "*.c": "c",
+    ".clang-format": "yaml",
+    "*.vim": "vimrc",
+    "*.lua": "lua",
+    ".clangd": "yaml",
+    "*.md": "markdown",
+    "*.in": "cmake"
+  },
+  // 使能每一种语言默认格式化规则
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": false
+    },
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[css]": {
+    "editor.defaultFormatter": "vscode.css-language-features",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[less]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "Vue.volar",
+    "editor.tabSize": 2,
+    "editor.insertSpaces": true
+  },
+  /*  prettier的配置 */
+  "prettier.printWidth": 120, // 超过最大值换行
+  "prettier.useTabs": false, // 缩进使用空格
+  "prettier.semi": true, // 句尾添加分号
+  "prettier.singleQuote": true, // 使用单引号代替双引号
+  "prettier.proseWrap": "preserve", // 默认值。因为使用了一些折行敏感型的渲染器（如GitHub comment）而按照markdown文本样式进行折行
+  "prettier.arrowParens": "avoid", //  (x) => {} 箭头函数参数只有一个时是否要有小括号。avoid：省略括号
+  "prettier.bracketSpacing": true, // 在对象，数组括号与文字之间加空格 "{ foo: bar }"
+  "prettier.endOfLine": "auto", // 结尾是 \n \r \n\r auto
+  "prettier.htmlWhitespaceSensitivity": "ignore",
+  "prettier.ignorePath": ".prettierignore", // 不使用prettier格式化的文件填写在项目的.prettierignore文件中
+  "prettier.bracketSameLine": false, // 在jsx中把'>' 是否单独放一行
+  "prettier.jsxSingleQuote": false, // 在jsx中使用单引号代替双引号
+  "prettier.requireConfig": false, // Require a 'prettierconfig' to format prettier
+  "prettier.trailingComma": "es5",
+  "prettier.tabWidth": 2,
+  "editor.wordWrap": "on",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "[markdown]": {
+    "editor.wordWrap": "on",
+    "editor.quickSuggestions": {
+      "comments": "off",
+      "strings": "off",
+      "other": "off"
+    },
+    "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+  },
+  "[go]": {
+    "editor.insertSpaces": false,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
+    },
+    "editor.defaultFormatter": "golang.go",
+    "editor.semanticHighlighting.enabled": true
+  },
+  "[java]": {
+    "editor.semanticHighlighting.enabled": true
+  },
+  "workbench.tree.indent": 18,
+  "material-icon-theme.folders.color": "#8ed2f8",
+  "remote.SSH.defaultForwardedPorts": [],
+  "prettier.useEditorConfig": false, // 因为有clang的lint，所以关掉
+  "editor.quickSuggestions": {
+    "comments": "on",
+    "strings": "on",
+    "other": "on"
+  },
+  "editor.quickSuggestionsDelay": 5,
+  "scm.defaultViewMode": "tree",
+  "go.gotoSymbol.includeImports": true,
+  "go.gotoSymbol.includeGoroot": true,
+  "go.toolsEnvVars": {
+    "GOBIN": "/Users/xiao/go/bin"
+  },
+  "go.useCodeSnippetsOnFunctionSuggest": true,
+  "git.enableSmartCommit": true,
+  "terminal.integrated.cursorStyle": "underline",
+  "[cpp]": {
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    },
+    "editor.autoIndent": "advanced",
+    "editor.wordBasedSuggestions": false,
+    "editor.suggest.insertMode": "replace",
+    "editor.semanticHighlighting.enabled": true,
+    "editor.defaultFormatter": "xaver.clang-format"
+  },
+  "git.ignoreLegacyWarning": true,
+  "git.confirmSync": false,
+  "editor.renderControlCharacters": false,
+  "terminal.integrated.inheritEnv": false,
+  "python.terminal.activateEnvironment": false,
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "explorer.compactFolders": false,
+  "go.testFlags": ["-v"],
+  "go.docsTool": "gogetdoc",
+  "go.coverOnTestPackage": false,
+  "go.testOnSave": false,
+  "java.dependency.showMembers": true,
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-1.8",
+      "path": "/Library/Java/JavaVirtualMachines/jdk1.8.0_261.jdk/Contents/Home",
+      "default": true
+    }
+  ],
+  //vim
+  "vim.foldfix": true, // 在折叠的情况下，按下j/k会自动折叠到下一个折叠点
+  "vim.insertModeKeyBindings": [
+    {
+      "before": [",", ","],
+      "after": ["<Esc>"]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [",", ","],
+      "after": ["<Esc>"]
+    }
+  ],
+  // vim 复合键连续按键时间
+  "vim.timeout": 140,
+  "workbench.editor.wrapTabs": true,
+  "workbench.editor.decorations.colors": true,
+  "workbench.editor.decorations.badges": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [120],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.wordBasedSuggestions": false
+  },
+  "rust-analyzer.checkOnSave.command": "clippy",
+  "[rust]": {
+    "editor.defaultFormatter": "rust-lang.rust-analyzer"
+  },
+  "go.toolsManagement.autoUpdate": true,
+  "editor.detectIndentation": false,
+  "[c]": {
+    "editor.quickSuggestions": {
+      "comments": "on",
+      "strings": "on",
+      "other": "on"
+    },
+    "editor.autoIndent": "advanced",
+    "editor.wordBasedSuggestions": false,
+    "editor.suggest.insertMode": "replace",
+    "editor.semanticHighlighting.enabled": true
+  },
+  "debug.onTaskErrors": "abort",
+  "terminal.integrated.tabs.enabled": true,
+  "python.analysis.completeFunctionParens": true,
+  "rust-analyzer.rustfmt.overrideCommand": null,
+  "editor.cursorStyle": "line",
+  "editor.lineNumbers": "on",
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "workbench.commandPalette.preserveInput": true,
+  "javascript.suggest.completeFunctionCalls": true,
+  "typescript.suggest.completeFunctionCalls": true,
+  "grunt.autoDetect": "on",
+  "jake.autoDetect": "on",
+  "editor.gotoLocation.alternativeImplementationCommand": "editor.action.goToImplementation",
+  "editor.gotoLocation.alternativeReferenceCommand": "editor.action.referenceSearch.trigger",
+  "security.workspace.trust.untrustedFiles": "open",
+  "extensions.autoUpdate": false,
+  "ibm-blockchain-platform.v2.fabric.runtime": {},
+  "ibm-blockchain-platform.ext.enableLocalFabric": true,
+  "python.defaultInterpreterPath": "/usr/local/bin/python3",
+  "go.autocompleteUnimportedPackages": true,
+  //
+  // "terminal.integrated.sendKeybindingsToShell": true
+  //for go
+  //gopls
+  "gopls": {
+    "build.experimentalWorkspaceModule": true,
+    "build.expandWorkspaceToModule": true
+  },
+  "explorer.autoReveal": false,
+  "javascript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+  "redhat.telemetry.enabled": true,
+  "cmake.configureOnOpen": false,
+  // cmake会重新设置路径, cmake命令中的debug于侧边栏的debug不同,cmake命令会生成的调试选项
+  "cmake.debugConfig": {
+    "stopAtEntry": false,
+    "MIMode": "lldb",
+    "miDebuggerPath": "/Users/xiao/.vscode/extensions/ms-vscode.cpptools-1.7.1/debugAdapters/lldb-mi/bin/lldb-mi",
+    "logging": {
+      "trace": true,
+      "engineLogging": true,
+      "traceResponse": true
+    }
+  },
+  "workbench.colorTheme": "Dracula Soft",
+  "editor.snippetSuggestions": "top",
+  "clangd.path": "/Users/xiao/Library/Application Support/Code/User/globalStorage/llvm-vs-code-extensions.vscode-clangd/install/15.0.3/clangd_15.0.3/bin/clangd",
+  "clangd.restartAfterCrash": true,
+  "github.copilot.enable": {
+    "*": true,
+    "yaml": true,
+    "plaintext": true,
+    "markdown": true,
+    "cpp": true,
+    "javascript": true,
+    "java": true,
+    "python": true,
+    "rust": true,
+    "go": true,
+    "c": true,
+    "csharp": true
+  },
+  "http.proxySupport": "on",
+  "editor.inlineSuggest.enabled": true,
+  // for check __cplusplus
+  "clangd.checkUpdates": true,
+  // "--compile-commands-dir 父级目录和build
+  "clangd.arguments": [
+    "--background-index",
+    "-j=12",
+    "--compile-commands-dir=${workspaceFolder}/build",
+    "--all-scopes-completion",
+    "--cross-file-rename",
+    "--header-insertion=iwyu",
+    "--header-insertion-decorators",
+    "--pch-storage=memory",
+    "--fallback-style=Google",
+    "--pretty",
+    "--clang-tidy",
+    // "--clang-tidy-checks=performance-*,bugprone-*",
+    "--query-driver=/usr/local/bin/g++",
+    "--ranking-model=decision_forest", //heuristics,decision_forest
+    "--enable-config"
+  ],
+  "editor.links": true, // TODO
+  "clangd.serverCompletionRanking": true,
+  // 无编译数据库commands_json时使用
+  // g++ -E -xc++ - -Wp,-v < /dev/null
+  "clangd.fallbackFlags": [
+    "--driver-mode=g++",
+    "-isystem",
+    "/usr/local/Cellar/gcc/12.2.0/include/c++/12",
+    "-isystem",
+    "/usr/local/Cellar/gcc/12.2.0/include/c++/12/x86_64-apple-darwin21",
+    "-isystem",
+    "/usr/local/Cellar/gcc/12.2.0/include/c++/12/backward",
+    "-isystem",
+    "/usr/local/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/x86_64-apple-darwin21/12/include",
+    "-isystem",
+    "/usr/local/Cellar/gcc/12.2.0/bin/../lib/gcc/current/gcc/x86_64-apple-darwin21/12/include-fixed",
+    "-isystem",
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/usr/include",
+    "-isystem",
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX12.sdk/System/Library/Frameworks",
+
+    "-isysroot",
+    "/Library/Developer/CommandLineTools/SDKs/MacOSX12.0.sdk",
+    "-mmacosx-version-min=12.0"
+  ],
+  "clang-format.executable": "/usr/local/bin/clang-format",
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "[yaml]": {
+    "editor.defaultFormatter": "redhat.vscode-yaml"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.validate.enable": false,
+  "cmake.configureOnEdit": false,
+  "cmake.buildDirectory": "${workspaceFolder}/build",
+  "files.autoSaveDelay": 500,
+  // 禁用rust 可变变量/方法的下划线
+  "editor.semanticTokenColorCustomizations": {
+    "enabled": true,
+    "rules": {
+      "*.mutable": {
+        "underline": true
+      }
+    }
+  },
+  "editor.autoClosingBrackets": "always",
+  "go.formatTool": "gofmt",
+  "git-autoconfig.configList": [
+    {
+      "user.email": "im.qxxiao@gmail.com",
+      "user.name": "qxxiao"
+    },
+    {
+      "user.email": "1785099588@qq.com",
+      "user.name": "qxxiao98"
+    }
+  ],
+  "markdown.extension.toc.orderedList": true,
+  "markdown.extension.preview.autoShowPreviewToSide": true,
+  "javascript.inlayHints.enumMemberValues.enabled": true,
+  "javascript.inlayHints.functionLikeReturnTypes.enabled": true,
+  "javascript.format.semicolons": "insert",
+  "javascript.inlayHints.parameterNames.enabled": "all",
+  "javascript.inlayHints.propertyDeclarationTypes.enabled": true,
+  "javascript.inlayHints.variableTypes.enabled": true,
+  "livePreview.portNumber": 5050,
+  "livePreview.debugOnExternalPreview": true,
+  "emmet.showSuggestionsAsSnippets": true,
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.useInlineCompletions": true,
+  "js/ts.implicitProjectConfig.checkJs": true,
+  "leetcode.hint.configWebviewMarkdown": false,
+  "vs-kubernetes": {
+    "vscode-kubernetes.minikube-path.mac": "/Users/xiao/.vs-kubernetes/tools/minikube/darwin-amd64/minikube",
+    "vscode-kubernetes.helm-path.mac": "/Users/xiao/.vs-kubernetes/tools/helm/darwin-amd64/helm"
+  },
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.smoothScrolling": true,
+  "workbench.list.smoothScrolling": true,
+  "editor.cursorBlinking": "smooth",
+  "editor.foldingMaximumRegions": 65000,
+  "leetcode.defaultLanguage": "cpp",
+  "leetcode.workspaceFolder": "/Users/xiao/.leetcode",
+  "editor.inlayHints.enabled": "off",
+  "material-icon-theme.hidesExplorerArrows": false,
+  "material-icon-theme.activeIconPack": "angular",
+  "material-icon-theme.folders.theme": "specific",
+  "cmake.buildEnvironment": {
+    "CXX": "/usr/local/bin/g++",
+    "C": "/usr/local/bin/gcc",
+    "CMAKE_EXPORT_COMPILE_COMMANDS": "true"
+  },
+  "cmake.cmakePath": "/usr/local/bin/cmake",
+  "markdown-preview-enhanced.previewTheme": "github-light.css",
+  "todo-tree.general.tags": ["BUG", "HACK", "FIXME", "TODO", "NOTE", "XXX", "[ ]", "[x]"],
+  "todo-tree.highlights.customHighlight": {
+    "TODO": {
+      "foreground": "#f19135",
+      "icon": "alert",
+      "type": "text-and-comment"
+    },
+    "FIXME": {
+      "foreground": "#ff5389",
+      "icon": "flame",
+      "type": "text-and-comment"
+    },
+    "BUG": {
+      "foreground": "#ff2c2c",
+      "icon": "bug",
+      "type": "text-and-comment"
+    },
+    "HACK": {
+      "foreground": "#4785ff",
+      "icon": "tools",
+      "type": "text-and-comment"
+    },
+    "NOTE": {
+      "foreground": "#87bf6d",
+      "icon": "note",
+      "type": "text-and-comment"
+    },
+    "XXX": {
+      "foreground": "#40ffb3",
+      "icon": "$(close)",
+      "type": "text-and-comment"
+    }
+  }
+}
+
